@@ -20,10 +20,10 @@ class PeliculasProvider {
     final decodedData = json.decode(resp.body); //lo transforma en un mapa
     final peliculas = new Peliculas.fromJsonList(decodedData['results']);
 
-    print(peliculas.items[0].title);
+    // print(peliculas.items[0].title);
     // print(decodedData['results']);
 
-    return [];
+    return peliculas.items;
 
   }
 
